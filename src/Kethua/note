@@ -1,0 +1,13 @@
+### inheritance
+kế thừa(inheritance) trong java là một cơ chế trong đó một đối tượng con có được thuộc tính và hành vi của một đối tuợng cha. Nó là một phần qtrong OOP
+Ý tưởng: bạn có thể tạo ra một lớp mới được xây dựng trên một lớp hiện  có. Khi bạn kế thừa từ một lớp hiện có, bạn có thể sử dụng lại phương thức
+và trường của lớp cha. Bạn cũng có thể thêm phương thức và trường mới trong lớp hiện tại của mình.
+=> đỡ tốn thời gian ngồi code và tiết kiệm tgian
+Kế thừa cha và con, trong java không có đa kế thừa
+1) Single: class B -> class A
+2) Multilevel: class C -> class B -> class A
+3) Hierarchical: class C && class B -> class A
+
+Chú ý: java không có đa kế thừa
+
+####

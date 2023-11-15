@@ -1,0 +1,50 @@
+### inheritance
+kế thừa(inheritance) trong java là một cơ chế trong đó một đối tượng con có được thuộc tính và hành vi của một đối tuợng cha. Nó là một phần qtrong OOP
+Ý tưởng: bạn có thể tạo ra một lớp mới được xây dựng trên một lớp hiện  có. Khi bạn kế thừa từ một lớp hiện có, bạn có thể sử dụng lại phương thức
+và trường của lớp cha. Bạn cũng có thể thêm phương thức và trường mới trong lớp hiện tại của mình.
+=> đỡ tốn thời gian ngồi code và tiết kiệm tgian
+Kế thừa cha và con, trong java không có đa kế thừa
+1) Single: class B -> class A VD: học sinh -> người
+2) Multilevel: class C -> class B -> class A VD: Babydog -> dog -> animal
+3) Hierarchical: class C && class B -> class A VD: dog && cat -> animal
+
+Chú ý: java không có đa kế thừa VD: 1 học sinh có thể là học sinh nhiều quốc gia, khi extends nếu call function xin chào thì sẽ không biết sử dụng ngôn ngữ nào.
+
+#### overriding: viết đè
+overriding là ghi đè những phương thức, được sử dụng trong trường hợp lớn con kế thừa từ lớp cha và muốn định nghĩa lại một phương thức có mặt lớp cha.
+Lý do: lớp cha có nhiều lớp con kế thừa, nhưng 1 vài phương thức không phù hợp với lớp con khác.
+VD animal : nhưng dog và cat và chim không có chung 1 tiếng kêu, hoặc đều có hành động eat nhưng eat của dog là đồ ăn còn con chim là con sâu.
+Quy tắc:
+- lớp cha và lớp con phải có mối quan hệ kế thừa
+- phương thức lớp cha và lớp con phải có tên giống nhau
+- phương thức lớp cha và lớp con phải có cùng tham số
+
+### Overloading: nạp chồng
+Overloading: là việc tạo ra nhiều phương thức trong một lớp có chung tên nhưng khác tham số truyền vào
+
+#### so sánh overloading ||||||||| overriding
+1) nạp chồng phương thức để giúp code chương trình dễ đọc hơn |||||||||||| ghi đè phương thức được sử dụng để cung cấp cài đặt cụ thể cho phương thức khai báo ở cha
+2) nạp chồng được thực hiện bên trong 1 class |||||||| ghi đè xảy ra trong 2 class có quan hệ kế thừa
+3) nạp chồng phương thức thì tham số khác nhau |||||||| ghi đè tham số giống nhau
+4) nạp chồng phương thức là ví dụ đa hình lúc biên dịch(trước khi chạy) |||||| ghi đè là ví dụ về đa hình lúc runtime()
+5) trong java nạp chồng phương thức không thể được thực hiện khi chỉ thay đổi kiểu giá trị về của phương thức. Kiểu trả về của phương thức, kiểu trả về có thể
+giông hoặc khác, giá trị có thể giống hoặc khác nhưng tham số khác nhau ||||| giá trị trả về giống nhau
+
+#### abtract phương thức trừu tượng
+Lớp trừu tượng không thể được dùng để tạo ra các đối tượng như những lớp bình thường khác.
+Và nó không thực hiện hàm đó mà các subclass sẽ thực hiện nó
+
+### Interface: để thu được tính trừu tượng và đa kế thừa trong java. Kế thừa theo dạng viết lại =)
+Một class con có thể implements rất nhiều interface cùng một lúc và phải hiện thực hóa
+
+#### Package: tập hợp các lớp, các giao tiếp, các kiểu liệt kê và các chú thích.
+Một gói là một nhóm các lớp và giao tiếp có quan hệ với nhau được tổ chức như một đơn vị trong không gian tên.
+Gói giúp phân hoạch không gian tên lớp, giao diện thành những vùng dễ quản lý hơn.
+Package có thể chứa nhiều pakage con và đặt tên không viết hoa
+
+### public, protected, private:
+private: chỉ truy cập dược trong class đó, còn trong pakage , subclass world đều ko dùng đc, chính vì vậy phải tạo getter và setter để lấy nó ra
+public: tất cả mọi nơi lấy được hết
+no access modifier: chỉ trong pakage đó dùng được, còn trong class, subclass, world đều ko dùng được
+protected: trong class, cùng gói cũng được , child cũng được, còn world thì ko dùng được
+
